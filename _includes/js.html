@@ -1,0 +1,122 @@
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Plugin D3 -->
+    <script src="{{ "/js/d3.v3.min.js" | prepend: site.baseurl }}"></script>
+
+     <!-- D3 Tooltip -->
+    <script src="{{ "/js/d3-tip.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- ToolTipster Plugin -->
+    <script src="{{ "/js/jquery.tooltipster.min.js" | prepend:site.baseurl }}"></script>
+
+
+    <!-- Plugin Squaire -->
+    <script src="{{ "/js/squaire.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
+
+   
+
+    
+
+    <script>
+        $(document).ready(function() {
+            
+            // Cartogram code
+            
+            var tooltipData = {},
+                tooltipMap,
+                tooltipIndex = 'Suspensions';
+//                tooltipColors,
+//                tooltipRepresentativesExtent;
+
+            //get max/min of a column of numeric data
+//            function getExtent(index) {
+//                var values = Object.keys(tooltipData).map(function (key) {
+//                        return tooltipData[key][index];
+//                    });
+//                return d3.extent(values, function(d){ return +d.replace(/[^\d-\.]/gi,''); });
+//            }
+
+            //get max/min of values in bar chart
+//            function getBarExtent(){
+//                var repExtent = getExtent("Representatives"),
+//                    electoralExtent = getExtent("Electoral Votes");
+//                return [d3.min([repExtent[0],electoralExtent[0]]), d3.max([repExtent[1],electoralExtent[1]])];
+//            }
+
+//            function updateLegend(extent, colors, index){
+//                var html = ''+extent[0]+'';
+//                html += colors.map(function(color, i){
+//                    return '';
+//                }).join('');
+//                html += ''+extent[1]+' min';
+//                $('#custom-tooltip-demo .legend').html(html);
+//            }
+
+//            function getTooltipColorScale(index) {
+//                var extent = getExtent(index),
+//                    colors = ['#e6eff9','#c9e2f5','#95cbee','#0098db','#0079ae'],
+//                    colorScale = d3.scale.quantize()
+//                        .domain(extent)
+//                        .range(colors);
+//                updateLegend(extent, colors, index);
+//                return colorScale;
+//            }
+
+            d3.tsv("data/suspensions_info.tsv", function(r){
+                // write values to object using id as proprety name
+                // id is the column name in the spreadsheet that maps to the layout and labels -- U.S. state two-letter abbreviations in default squaire.js settings
+                tooltipData[r.State] = r;
+                //remove id from dictionary values
+                delete tooltipData[r.State].State; 
+                console.log(r.Info);
+                return r;
+            }, function(csv) {
+                //callback when file loaded and data formatted
+//                tooltipColors = getTooltipColorScale(tooltipIndex);
+//                tooltipRepresentativesExtent = getBarExtent();
+                //init map
+                tooltipMap = new Squaire(tooltipData, {
+//                    el: "#custom-tooltip",
+                    index: tooltipIndex,
+                    labelStyle: "ap",
+//                    colors: tooltipColors,
+                    classIndex: "landlocked",
+                    tooltip: {
+                        enabled: true,
+                        mode: 'toggle',
+                        el: "#custom-tooltip-toolbox",
+//                        layout: tooltipBarLayout,
+                        whitelist: ["Info",],
+//                        column1: 'Category',
+//                        column2: 'Value'
+                    }
+                });
+            });
+            
+        });
+        
+        // Tooltip code
+        $('.tweet').tooltip({
+            animated: 'fade',
+            placement: 'bottom',
+            html: true,
+            template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>'
+        });
+        
+        
+        
+    </script>
