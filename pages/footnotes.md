@@ -1,7 +1,7 @@
 ---
 layout: static
 title: Footnotes
-permalink: /extras/
+permalink: /footnotes/
 ---
 
 1. Source 1
