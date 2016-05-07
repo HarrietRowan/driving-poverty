@@ -139,6 +139,7 @@ a:hover, a:focus {
     .sidebar-left {
         width: 100%;
         margin-left: 0;
+        margin-bottom: 20px;
     }  
 }
 
@@ -151,9 +152,10 @@ a:hover, a:focus {
     margin-right: -250px;
 }
 @media (max-width : 992px) {
-    .sidebar-left {
+    .sidebar-right {
         width: 100%;
         margin-right: 0;
+        margin-bottom: 20px;
     }  
 }
 
