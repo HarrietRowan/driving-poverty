@@ -2,7 +2,7 @@
 title: Driving Poverty
 email: hattierowan@gmail.com
 url: http://harrietrowan.github.io/driving-poverty
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "An explainer about how driver's license suspension policies amplify inequality."
 
 baseurl: http://harrietrowan.github.io/driving-poverty
 
@@ -17,15 +17,9 @@ footer: Harriet Rowan
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+    url: https://twitter.com/HattieRowan
   - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+    url: https://github.com/HarrietRowan
 
 # Build settings
 markdown: kramdown
