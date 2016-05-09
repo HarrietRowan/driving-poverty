@@ -487,6 +487,11 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+hr {
+    margin: 5px 0;
+    border: 2px solid WhiteSmoke;
+}
+
 /*
 a {
     text-decoration-line: underline;   
