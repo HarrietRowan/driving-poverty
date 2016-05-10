@@ -21,3 +21,11 @@ permalink: /footnotes/
 8. Vivian Wang. "Ticket to nowhere: The hidden cost of driver's license suspensions." Milwaukee Journal Sentinel, August 15, 2015.
 
 9. Josh O'Gorman. "Shumlin looks to curb driver's license suspensions." The Barre Montpelier Times Argus, January 12, 2016.
+
+10. United States Department of Justice Civil Rights Division. "Investigation of the Ferguson Police Department." March 4, 2015.
+
+11. John Pawasarat. "The Driver License Status of the Voting Age Population in Wisconsin." Employment and Training Institute, University of Wisconsin-Milwaukee, June 2005.
+
+12. Tierney Sneed. "Why The Alabama DMV Closures Struck Such A Nerve With Voting Rights Activists." Talking Points Memo, October 5, 2015.
+
+13. Back on the Road California. "Stopped, Fined, Arrested: Racial Bias in Policing and Traffic Courts in California." April 2016. 
