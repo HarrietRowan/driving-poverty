@@ -492,6 +492,20 @@ hr {
     border: 2px solid WhiteSmoke;
 }
 
+@media (max-width:992px){
+    
+    .nav.navbar-nav{
+        font-size: 0.8em;
+    }
+    
+}
+
+@media (max-width:765px){
+    header.intro{
+        margin-top: 50px;
+    }
+}
+
 /*
 a {
     text-decoration-line: underline;   
