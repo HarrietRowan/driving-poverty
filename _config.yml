@@ -3,8 +3,8 @@ title: Driving Poverty
 email: hattierowan@gmail.com
 url: http://harrietrowan.github.io/driving-poverty
 description: "An explainer about how driver's license suspension policies amplify inequality."
-#
-#baseurl: http://harrietrowan.github.io/driving-poverty
+
+baseurl: http://harrietrowan.github.io/driving-poverty
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
