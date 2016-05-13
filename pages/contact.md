@@ -7,8 +7,6 @@ permalink: /contact/
 <section id="contact" class="container content-section text-center col-md-offset-0">
     <div class="row">
         <div class="col-md-8 col-md-offset-0">
-            <h2>Contact</h2>
-            <p>Dolor reprehenderit repellendus, optio labore odio at tempore debitis nisi. Quasi debitis tenetur eaque molestias non porro odio sapiente.</p>
             <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>
             </p>
             <ul class="list-inline banner-social-buttons">
